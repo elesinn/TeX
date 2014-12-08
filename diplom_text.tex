@@ -1,0 +1,116 @@
+
+\documentclass[a4paper,12pt]{article}
+
+\def\N{{\cal N}{\!}\underline{\circ}}
+
+\usepackage[cp1251]{inputenc}
+
+\usepackage{mathtext}
+
+\usepackage[russian]{babel}
+\usepackage{verbatim}
+
+\usepackage[active]{srcltx}
+\usepackage{graphicx}
+
+\renewcommand{\baselinestretch}{1.3}
+\newcommand{\argmin}{\mathop{\mathrm{argmin}}}
+\newcommand{\argmax}{\mathop{\mathrm{argmax}}}
+\newcommand{\Argmin}{\mathop{\mathrm{Argmin}}}
+\newcommand{\Argmax}{\mathop{\mathrm{Argmax}}}
+\newcommand{\dom}{\mathop{\mathrm{dom}}}
+\newcommand{\inter}{\mathop{\mathrm{int}}}
+\newcommand{\cl}{\mathop{\mathrm{cl}}}
+\newcommand{\epi}{\mathop{\mathrm{epi}}}
+\newcommand{\meas}{\mathop{\mathrm{meas}}}
+\newcommand{\ri}{\mathop{\mathrm{ri}}}
+%\makeatletter \@addtoreset{equation}{section}
+%\renewcommand{\theequation}{\thesection.\arabic{equation}}
+%\makeatother
+\newcounter{lem}[section]
+\renewcommand{\thelem}{\thesection.\arabic{lem}}
+\newenvironment{Lemma}{\par\refstepcounter{lem}\bf Лемма \thelem. \it}{\rm\par}
+\newcounter{rem}[section]
+\renewcommand{\therem}{\thesection.\arabic{rem}}
+\newenvironment{Remark}{\par\refstepcounter{rem}\bf Замечание \therem. \it}{\rm\par}
+\newcounter{defin}[section]
+\renewcommand{\thedefin}{\thesection.\arabic{defin}}
+\newenvironment{Definition}{\par\refstepcounter{defin}\bf Определение \thedefin. \it}{\rm\par}
+\newcounter{theorem}[section]
+\renewcommand{\thetheorem}{\thesection.\arabic{theorem}}
+\newenvironment{Theorem}{\par\refstepcounter{theorem}\bf Теорема \thetheorem. \it}{\rm\par}
+\newcounter{ex}[section]
+\renewcommand{\theex}{\thesection.\arabic{ex}}
+\newenvironment{Example}{\par\refstepcounter{ex}\bf Пример \theex. \it}{\rm\par}
+\newcounter{prp}[section]
+\renewcommand{\theprp}{\thesection.\arabic{prp}}
+\newenvironment{Proposition}{\par\refstepcounter{prp}\bf Утверждение \theprp. \it}{\rm\par}
+\textheight 26cm \textwidth 17cm \hoffset -1cm \voffset -2.5cm
+
+
+\begin{document}
+
+
+Для формулировки и доказательства классического параметрического принципа Лагранжа, частным случаем которого является классическая параметрическая теорема Куна–Таккера, напомним, прежде всего, понятие нормали (в смысле выпуклого анализа) к выпуклому множеству и субдифференциала выпуклой функции.
+
+\begin{Lemma}
+Ненулевой вектор $v \in H$, где $H$ - гильбертово пространство, называется нормалью (в смысле выпуклого анализа) к выпуклому множеству $\Omega \subset H$ в точке $x\in \bar {\Omega}$, если выполняется неравенство $\langle v,c-x \rangle \le 0 \,\,\, \forall c \in \bar {\Omega}.$ Множество всех таких нормалей к выпуклому множеству $\Omega \subset H$ в точке $x\in \bar {\Omega}$ обозначим через $N_{\Omega}(x).$ Если $f\,\,:\,\,H \to R^{1} \cup \{+ \infty \}$выпуклая функция, то $\zeta \in df(x),$ где $df(x) -$ субдифференциал в смысле выпуклого анализа функции $f,$ тогда и только тогда, когда $(\zeta,-1)\in N_{epi f}(x,f(x)),$ что, в свою очередь, эквивалентно неравенству
+$$
+\langle (\zeta,-1),(y,r)-(x,f(x)) \rangle \le 0 \,\,\forall (y,r) \in epi f.
+$$
+\end{Lemma}
+Справедлива следующая
+\begin{Theorem}
+[Параметрический принцип Лагранжа в недифференциальной форме] Пусть функция $f\,:\,Z\to R^1$ выпукла, $\beta(p,r)< + \infty.$ Тогда справедливы следующие утверждения.
+
+\textbf{1.} Пусть $z^0_{p,r} \in D^0_{p,r} \equiv \{ z \in D \,:\, Az-h-p=0,\,g_i(z)\le r_i,\,i=1,...,m\}\, - $ оптимальный элемент в задаче
+\end{Theorem}
+
+
+
+
+
+
+
+
+
+\begin{thebibliography}{10}
+\bibitem {altifom} Алексеев В.М., Тихомиров В.М.,  Фомин С.В. Оптимальное
+управление. М.: Наука, 1979.
+
+\bibitem {lagrange} Лагранж Ж. Аналитическая механика. М.-Л.:
+Гостехиздат, 1950.
+
+\bibitem {tikhars} Тихонов А.Н., Арсенин В.Я. Методы решения некорректных
+задач. М.: Наука, 1986.
+
+\bibitem {sumintextbook} Сумин М.И. Некорректные задачи и методы их решения. Материалы к
+лекциям для студентов старших курсов: Учебное пособие. Нижний
+Новгород: Издательство Нижегородского госуниверситета, 2009.
+
+
+\bibitem {suminm2011} Сумин М.И. Регуляризованная параметрическая
+теорема Куна--Таккера в гильбертовом пространстве
+// Журн. вычисл. матем. и матем. физ. 2011. Т. 51. №9. С.~1594-1615.
+
+\bibitem {suminm2014} Сумин М.И. Устойчивое секвенциальное выпуклое программирование в
+гильбертовом пространстве и его приложение к решению неустойчивых
+задач // Журн. вычисл. матем. и матем. физ. 2014. Т. 54. №1.
+С.~25-49.
+
+
+\bibitem {suminm2007} Сумин М.И. Регуляризация в линейно выпуклой задаче
+математического программирования на основе теории двойственности //
+Журн. вычисл. матем. и матем. физ. 2007. Т. 47. №4. С. 602-625.
+
+\bibitem {suminkuterin} Кутерин Ф.А., Сумин М.И. Применение двойственной
+регуляризации в оптимизации и некорректных задачах (с программным
+комплексом и описанием лабораторных работ). Электронное
+учебно-методическое пособие. Нижний Новгород: Нижегородский
+госуниверситет, 2012. - 90 с.
+(http://www.unn.ru/books/resources.html, Регистрационный номер
+486.12.06)
+
+\end{thebibliography}
+
+\end{document}
